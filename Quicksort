@@ -1,7 +1,7 @@
 public class Quicksort{
   static int dividir(int V[], int a, int b){
     int pivo = V[b];
-    int parede = a - 1;
+    int i = parede - 1;
     for(int j = parede; j < b; j++){
       if(V[j] <= pivo){
         int aux = V[j];
