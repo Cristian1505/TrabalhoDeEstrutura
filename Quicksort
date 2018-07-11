@@ -1,5 +1,5 @@
 public class Quicksort{
-  static int dividir(int V[], int a, int b){
+  static int dividir(int V[], int parede, int b){
     int pivo = V[b];
     int i = parede - 1;
     for(int j = parede; j < b; j++){
