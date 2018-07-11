@@ -1,22 +1,23 @@
-public class{
-
-static int dividir(int V[], int a, int b){
-  int pivo = V[b];
-  int parede = a - 1;
-  for(int j = parede; j < b; j++){
-    if(V[j] <= pivo){
-      int aux = V[j];
-      V[j] = V[i];
-      V[i] = aux;
+public class Quicksort{
+  static int dividir(int V[], int a, int b){
+    int pivo = V[b];
+    int parede = a - 1;
+    for(int j = parede; j < b; j++){
+      if(V[j] <= pivo){
+        int aux = V[j];
+        V[j] = V[i];
+        V[i] = aux;
+      }
+      V[b] = V[parede + 1];
+      V[parede + 1] = pivo;
+      return i + 1;
     }
-     V[b] = V[parede + 1];
-     V[parede + 1] = pivo;
-     return i + 1;
   }
-  static void quicksort(int V[], int parede, int b){
-  if(parede < b){
-  int quick = dividir(V, parede, b);
-  quicksort(V, parede, quick - 1);
-  quicksort(V, quick + 1, b);
-  }
+    static void quicksort(int V[], int parede, int b){
+      if(parede < b){
+        int quick = dividir(V, parede, b);
+        quicksort(V, parede, quick - 1);
+        quicksort(V, quick + 1, b);
+     }
+   }
 }
